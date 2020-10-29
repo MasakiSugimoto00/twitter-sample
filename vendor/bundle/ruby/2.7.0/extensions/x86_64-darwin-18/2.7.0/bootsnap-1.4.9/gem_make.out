@@ -1,0 +1,15 @@
+current directory: /Users/sugimotomaki/twitter-sample/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.9/ext/bootsnap
+/Users/sugimotomaki/.rbenv/versions/2.7.1/bin/ruby -I /Users/sugimotomaki/.rbenv/versions/2.7.1/lib/ruby/site_ruby/2.7.0 -r ./siteconf20201028-50616-155p3ub.rb extconf.rb
+creating Makefile
+
+current directory: /Users/sugimotomaki/twitter-sample/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.9/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/sugimotomaki/twitter-sample/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.9/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/sugimotomaki/twitter-sample/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.9/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20201028-50616-80sr9p/bootsnap
