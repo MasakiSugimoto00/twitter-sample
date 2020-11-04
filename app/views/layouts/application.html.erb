@@ -12,17 +12,19 @@
   <body>
     <header>
       <div class="header-logo">
-        <%=link_to("Twitter-Sample","/")%>
+        <%=link_to "Twitter-Sample", root_path %>
       </div>
       <ul class="header-menus">
         <li>
-          <%=link_to("Twitterとは","/about")%>
+          <%= link_to "Twitterとは", about_path %>
         </li>
         <li>
-        <%=link_to("投稿一覧","/posts/index")%>
+        <%= link_to "投稿一覧", posts_path %>
       </li>
       </ul>
     </header>
-    <%= yield %>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
   </body>
 </html>
