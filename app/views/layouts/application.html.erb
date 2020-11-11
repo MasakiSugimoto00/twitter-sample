@@ -5,6 +5,9 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta content="width=1440, maximum-scale=1.0" name="viewport"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -19,12 +22,13 @@
           <%= link_to "Twitterとは", about_path %>
         </li>
         <li>
-        <%= link_to "投稿一覧", posts_path %>
-      </li>
+          <%= link_to "投稿一覧", posts_path %>
+        </li>
+        <li>
+          <%= link_to "ユーザ一覧", users_path %>
+        </li>
       </ul>
     </header>
-    <div class="wrapper">
-      <%= yield %>
-    </div>
+    <%= yield %>
   </body>
 </html>
