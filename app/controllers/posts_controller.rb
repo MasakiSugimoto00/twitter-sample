@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :like_create, :like_destroy]
+  before_action :set_like, only: :like_destroy
 
   # GET /posts
   # GET /posts.json
@@ -25,6 +26,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    @post.user = current_user
 
     respond_to do |format|
       if @post.save
@@ -61,6 +63,16 @@ class PostsController < ApplicationController
     end
   end
 
+  def like_create
+    Like.create!(user: current_user, post: @post) if @post
+    redirect_to posts_path
+  end
+
+  def like_destroy
+    @like.destroy
+    redirect_to posts_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
@@ -70,5 +82,9 @@ class PostsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def post_params
       params.require(:post).permit(:user_id, :content)
+    end
+
+    def set_like
+      @like = Like.find_by(user: current_user, post: @post)
     end
 end
