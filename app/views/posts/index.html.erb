@@ -18,12 +18,13 @@
       <% end %>
       <div class="del-btn">
         <%= post.created_at.strftime('%Y年%m月%d日 %H:%M') %>
-        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to '削除', post, method: :delete, data: { confirm: '削除してもよろしいですか?' } %>
       </div>
+
     </div>
   <% end %>
 
   <br>
 
-  <%= link_to 'New Post', new_post_path %>
+  <%= link_to '新規投稿', new_post_path %>
 </div>

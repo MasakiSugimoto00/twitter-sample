@@ -18,17 +18,23 @@
         <%=link_to "Twitter-Sample", root_path %>
       </div>
       <ul class="header-menus">
-        <li>
-          <%= link_to "Twitterとは", about_path %>
-        </li>
-        <li>
-          <%= link_to "投稿一覧", posts_path %>
-        </li>
-        <li>
-          <%= link_to "ユーザ一覧", users_path %>
-        </li>
-      </ul>
+
+        <ul class="header-menus">
+          <li>
+            <%= link_to "Twitterとは", about_path %>
+          </li>
+          <li>
+            <%= link_to "投稿一覧", posts_path %>
+          </li>
+          <li>
+            <%= link_to "ユーザ一覧", users_path %>
+          </li>
+          <li>
+            <%= link_to "ログイン", login_path %>
+        </ul>
+
     </header>
+
     <%= yield %>
   </body>
 </html>
