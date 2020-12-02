@@ -12,14 +12,11 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.select :user_id, User.all.map{ |x| [x.nickname, x.id] }, {} %>
+    <%= form.label :content %>
+    <%= form.text_field :content,id: "input-text" %>
+    <p id="counter">0文字</p>
   </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_field :content %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>

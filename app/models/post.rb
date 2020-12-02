@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   belongs_to :user
+  has_many :likes
 
-  attr_accessor :img_url
+  validates :content, presence: true, length: { in: 1..140 }
 end
