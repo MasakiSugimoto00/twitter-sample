@@ -13,4 +13,13 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require jquery
+//= require jquery_ujs
 //= require_tree .
+
+$(function(){
+ $("#input-text").on("keyup", function() {
+   let countNum = String($(this).val().length);
+   $("#counter").text(countNum + "文字");
+ });
+});
