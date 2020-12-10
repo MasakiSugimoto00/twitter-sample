@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       delete :like_destroy
     end
   end
+  resources :relationships, only: [:create, :destroy]
   get "login" =>"users#login_form"
   post "login" =>"users#login"
   post "logout" => "users#logout"
